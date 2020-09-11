@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        ._1{
+            width: 10rem;
+            height: 2rem;
+            border-radius: .4rem;
+            box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .7);
+            margin: 1rem;
+        }
+        ._1:hover{
+            background-color: aqua;
+        }
+        ._2{
+            width: 10rem;
+            height: 2rem;
+            border-radius: .4rem;
+            box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, .7);
+        }
+        ._2:hover{
+            background-color: aqua;
+        }
+        p{
+            font-size: 2rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
+</head>
+<body>
+     <input type="button" value="Verde" class="_1" onclick="verde()">
+     <input type="button" value="Branco" class="_2" onclick="branco()">
+     <p id="frase">Escolha o botao</p>
+     <div id="imges"></div>
+     <script>
+        var cor = false;
+        var img = window.document.createElement('img');
+        img.setAttribute('id','foto');
+         function verde(){
+             cor = true;
+             if(cor==true){
+                window.document.body.style.background = '#00ff00'
+                frase.innerHTML = 'Você escolheu verde';
+                img.setAttribute('src','img/verde.png');
+            }
+         }
+
+         function branco(){
+             cor = false;
+             if(cor==false){
+                window.document.body.style.background = '#ffffff'
+                frase.innerHTML = 'Você escolheu branco';
+                img.setAttribute('src', 'img/branco.png');
+            }
+            imges.appendChild(img);
+         }
+     </script>
+</body>
+</html>
